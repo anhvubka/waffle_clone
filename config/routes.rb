@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root "start_page#new" 
   get "auth/:provider/callback" => "sessions#create"
   get "signout" => "sessions#destroy"
   # The priority is based upon order of creation: first created -> highest priority.
