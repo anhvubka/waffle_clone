@@ -1,3 +1,6 @@
 <h1>Le Anh Vu</h1>
 
 <h1>Pham Van Dinh</h1>
+<% if current_user %>
+	<p><%= current_user.name %></p>
+<% end %>
