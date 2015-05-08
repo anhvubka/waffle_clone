@@ -1,6 +1,9 @@
 
 <% if current_user?(@user) %>
-	<p><%= @user.name %></p>
+	<% @github_user.repositories.each do |repo| %>
+		<p><%= link_to repo.full_name, repo.html_url %></p>
+	<% end %>
+	<p><%= @github_user.login %></p>
 <% else %>
 	<p><%= "Please Log in" %></p>	
 <% end %>
