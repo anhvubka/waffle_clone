@@ -1,0 +1,6 @@
+<h1>Hello</h1>
+<p><%= @repo.slug %></p>
+
+<% @issues.each do |issue|%>
+	<p><%= issue.attrs.keys %></p>
+<% end %>
