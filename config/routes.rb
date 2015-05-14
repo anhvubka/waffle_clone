@@ -1,12 +1,7 @@
 Rails.application.routes.draw do
-  get 'repositories/show'
-
-  get 'users/show'
-
   root "start_page#new" 
   get "start_page/edit"
   get "auth/:provider/callback" => "sessions#create"
-  get "repositories/:owner/:name" => "repositories#show"
   get "signout" => "sessions#destroy"
   resources :users, only: [:show]
   resources :repositories, only: [:show]
