@@ -14,3 +14,28 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(init);
+ 	function init()
+ 	{
+		$('#ticketContainerA,#ticketContainerB,#ticketContainerC,#ticketContainerD').sortable({
+			 connectWith:'#ticketContainerA,#ticketContainerB,#ticketContainerC,#ticketContainerD',
+			 start: function (event, ui) {
+
+            },
+            receive : function (event, ui)
+            {
+                console.log(ui.item[0]);
+                console.log(event.target);
+            },
+            stop: function (event, ui) {
+               //console.log("cc");
+            }
+            /*
+             stop : function (event, ui)
+             {
+               alert("stop "+);
+               return true;
+             }
+             */
+		});
+ 	};

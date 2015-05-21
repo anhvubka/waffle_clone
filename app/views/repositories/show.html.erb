@@ -1,6 +1,93 @@
 <h1>Hello</h1>
 <p><%= @repo.slug %></p>
 <p><%= @issues.length %></p>
-<% @issues.each do |issue|%>
+<% @issues.each do |issue| %>
 	<p><%= issue.attrs %></p>
 <% end %>
+<div id="header">
+</div>
+
+<div id="main">
+<div class="columInMainContainer">
+	<div class="columInMain"	 >
+		<div class="NameColum">
+			<p> Backlog </p>		
+		</div>
+		<div class = "ticketContainer" id="ticketContainerA">
+			<% @issues.each do |issue| %>
+				<% if issue.state == "open" && issue.labels.length == 0%>
+					<div class="ticket" id=<% issue.id %>  >
+						<div class = "ticketHeader">
+						</div>
+						<div class = "ticketBody">	
+							<p> <%= issue.title %></p>
+						</div>
+					</div>
+				<% end %>
+			<%end%>
+			
+		</div>
+	</div>
+</div>
+<div class="columInMainContainer">
+	<div class="columInMain">
+		<div class="NameColum">
+			<p> Ready </p>		
+		</div>
+		<div class = "ticketContainer" id="ticketContainerB">
+			<% @issues.each do |issue| %>
+				<% if issue.state == "open" && issue.labels.length != 0 && issue.labels[0].name == "ready" %>
+					<div class="ticket" id=<% issue.id %>  >
+						<div class = "ticketHeader">
+						</div>
+						<div class = "ticketBody">	
+							<p> <%= issue.title %></p>
+						</div>
+					</div>
+				<% end %>
+			<%end%>
+		</div>
+	</div>
+</div>
+<div class="columInMainContainer">
+	<div class="columInMain">
+		<div class="NameColum">
+			<p> In Progress </p>		
+		</div>
+		<div class = "ticketContainer"	id="ticketContainerC">
+			<% @issues.each do |issue| %>
+				<% if issue.state == "open" && issue.labels.length != 0 && issue.labels[0].name == "in progress" %>
+					<div class="ticket" id=<% issue.id %>  >
+						<div class = "ticketHeader">
+						</div>
+						<div class = "ticketBody">	
+							<p> <%= issue.title %></p>
+						</div>
+					</div>
+				<% end %>
+			<%end%>
+		</div>
+	</div>
+</div>
+<div class="columInMainContainer">
+	<div class="columInMain">
+		<div class="NameColum">
+			<p> Done </p>		
+		</div>
+		<div class = "ticketContainer"	id="ticketContainerD">
+			<% @closed_issues.each do |issue| %>
+				<div class="ticket" id=<% issue.id %>  >
+					<div class = "ticketHeader">
+					</div>
+					<div class = "ticketBody">	
+						<p> <%= issue.title %></p>
+					</div>
+				</div>
+			<%end%>
+		</div>
+	</div>
+</div>
+
+</div>
+
+<script src="myScript.js"></script>

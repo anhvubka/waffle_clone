@@ -13,3 +13,115 @@
  *= require_tree .
  *= require_self
  */
+html, body {
+  height: 100%;
+width:100%;
+  margin: 0;
+}
+#header {
+    background-color:white;
+    height: 8%;
+    width: 100%;
+	border-bottom: solid 1px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgb(205,205,205);
+}
+#main{
+	background-color: #e6e6e6;
+	display:block;
+    	width: 100%;
+	height: 91%;
+	border: solid 2px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(205,205,205);
+}
+
+.columInMainContainer{
+	background-color: #e6e6e6;
+	width: 25%;
+  	height: 100%;
+  	overflow: hidden;
+  	min-width: 247px;
+ 	 float: left;
+}
+.columInMain{
+  	height: 100%;
+	border-right: 5px solid ;
+	border-right-color: rgb(205,205,205);
+	
+}
+
+.NameColum{
+text-align: center;
+  height: 34px;
+  font-family: 'Cabin', sans-serif;
+  line-height: 34px;
+  font-size: 17px;
+  border-bottom-color: rgb(205,205,205);
+}
+
+.ticketContainer{
+	height: 592px;
+	padding: 10px 20px;
+}
+
+.ticket {
+  margin-bottom: 20px;
+  -webkit-box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 1s;
+  transition: -webkit-box-shadow 1s;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  position: relative;
+}
+
+.ticketHeader{
+  -webkit-border-top-right-radius: 2px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 2px;
+  -moz-border-radius-topright: 2px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 2px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  height: 22px;
+  font-family: 'Lato', sans-serif;
+  background-color: #343434;
+  font-size: 15px;
+  position: relative;
+  color: white;
+}
+.ticketBody{
+  padding: 5px 5px 2px 5px;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 2px;
+  -moz-border-radius-bottomleft: 2px;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 0;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  position: relative;
+  background-color: #FFF;
+  font-size: 15px;
+  word-wrap: break-word;
+}

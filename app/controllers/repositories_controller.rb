@@ -4,6 +4,7 @@ require 'octokit'
   	@repo = Octokit::Repository.new(params[:id]) 
   	if @repo
     	@issues = Octokit.list_issues(@repo.slug)
+    	@closed_issues = Octokit.list_issues(@repo.slug, state: 'closed')
   	end
   end
 end
