@@ -6,6 +6,10 @@ require 'octokit'
     	@issues = Octokit.list_issues(@repo.slug)
     	@closed_issues = Octokit.list_issues(@repo.slug, state: 'closed')
   	end
-  	
+
+  end
+
+  def change
+  	 render :text => "hello world!"
   end
 end

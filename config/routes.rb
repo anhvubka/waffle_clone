@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get "start_page/edit"
   get "auth/:provider/callback" => "sessions#create"
   get "signout" => "sessions#destroy"
+
+  post "/repositories/change" 
   resources :users, only: [:show]
   resources :repositories, only: [:show]
   # The priority is based upon order of creation: first created -> highest priority.
