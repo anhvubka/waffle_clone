@@ -1,9 +1,3 @@
-<h1>Hello</h1>
-<p><%= @repo.slug %></p>
-<p><%= @issues.length %></p>
-<% @issues.each do |issue| %>
-	<p><%= issue.attrs %></p>
-<% end %>
 <div id="header">
 </div>
 
@@ -90,4 +84,33 @@
 
 </div>
 
-<script src="myScript.js"></script>
+
+ 	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+   	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script>
+ 	$(init);
+ 	function init()
+ 	{
+		$('#ticketContainerA,#ticketContainerB,#ticketContainerC,#ticketContainerD').sortable({
+			 connectWith:'#ticketContainerA,#ticketContainerB,#ticketContainerC,#ticketContainerD',
+			 start: function (event, ui) {
+
+            },
+            receive : function (event, ui)
+            {
+                console.log(ui.item[0]);
+                console.log(event.target);
+            },
+            stop: function (event, ui) {
+               //console.log("cc");
+            }
+            /*
+             stop : function (event, ui)
+             {
+               alert("stop "+);
+               return true;
+             }
+             */
+		});
+ 	};
+	</script>

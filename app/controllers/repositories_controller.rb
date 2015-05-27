@@ -6,5 +6,6 @@ require 'octokit'
     	@issues = Octokit.list_issues(@repo.slug)
     	@closed_issues = Octokit.list_issues(@repo.slug, state: 'closed')
   	end
+  	
   end
 end
